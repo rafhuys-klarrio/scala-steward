@@ -51,7 +51,7 @@ final case class Version(value: String) {
           // Do not select pre-releases of different series.
           (v.isPreRelease && !sameSeries) ||
           // Do not select pre-releases of the same series if this is not a pre-release.
-          (v.isPreRelease && !isPreRelease && sameSeries) ||
+          //(v.isPreRelease && !isPreRelease && sameSeries) ||
           // Do not select versions with pre-release identifiers whose order is smaller
           // than the order of pre-release identifiers in this version. This, for example,
           // prevents updates from 2.1.4.0-RC17 to 2.1.4.0-RC17+1-307f2f6c-SNAPSHOT.
